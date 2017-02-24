@@ -56,10 +56,10 @@ public class StoreCopy {
     private static void copyStore(String sourceDir, String targetDir, Set<String> ignoreRelTypes, Set<String> ignoreProperties, Set<String> ignoreLabels) throws Exception {
         final File target = new File(targetDir);
         final File source = new File(sourceDir);
-        if (target.exists()) {
-            FileUtils.deleteRecursively(target);
+        // if (target.exists()) {
+            // FileUtils.deleteRecursively(target);
             // throw new IllegalArgumentException("Target Directory already exists "+target);
-        }
+        // }
         if (!source.exists()) throw new IllegalArgumentException("Source Database does not exist " + source);
 
         Pair<Long, Long> highestIds = getHighestNodeId(source);
